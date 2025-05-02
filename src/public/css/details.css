@@ -1,0 +1,129 @@
+main {
+    background-color: rgba(159, 122, 122, 0.071);
+    height: 100vh;
+}
+
+.details__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    width: 60%;
+}
+
+.details__heading {
+    margin: 5px auto;
+    width: 100%;
+}
+
+.flex__content{
+    width: 50%;
+}
+
+.form {
+    margin: 0 auto;
+    text-align: center;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex__img {
+    width: 45%;
+}
+
+.form__group {
+    margin-bottom: 10px;
+}
+
+.form__group-title {
+    display: flex;
+    margin: 7px 0px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--text {
+    text-align: left;
+}
+
+.form__input--text img {
+    width: 100%;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--text button {
+    height: 28px;
+    margin-top: 10px;
+
+}
+
+.form__input--textarea textarea {
+    height: 130px;
+    border-radius: 5px;
+}
+
+.form__input--checkbox div{
+    display: flex;
+}
+
+.input__checkbox label {
+    margin-right: 30px;
+}
+
+.input__checkbox input {
+    border-radius: 50%;
+}
+
+.form__button-submit {
+    padding: 5px;
+    width: 25%;
+    height: 45px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(249, 198, 30, 0.849);
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.details__back-btn {
+    padding: 5px;
+    width: 30%;
+    height: 45px;
+    border: none;
+    border-radius: 3px;
+    background: rgb(192, 191, 191);
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+.form__button a {
+    padding: 11px 80px;
+}
+.details__link{
+    color: rgba(0, 145, 255, 0.749);
+    text-decoration: none;
+}
+
+.form__delete {
+    text-align: right;
+    margin-right: 100px;
+}

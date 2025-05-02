@@ -1,0 +1,118 @@
+main {
+    background-color: rgba(159, 122, 122, 0.071);
+    height: 100%;
+}
+
+.registration__content {
+    margin: 0 auto;
+    padding: 5px 15px;
+    width: 70%;
+}
+
+.registration__heading {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+.form__group {
+    margin-bottom: 10px;
+}
+
+.form__group-title {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.form__label--required {
+    margin-left: 10px;
+    padding: 0px 6px;
+    border-radius: 2px;
+    background: red;
+    color: #fff;
+}
+
+.form__label--selection {
+    margin-left: 10px;
+    padding: 0px 6px;
+    color: red;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    appearance: none;
+}
+
+.form__input--text{
+    text-align: left;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--text button {
+    height: 28px;
+    margin-top: 10px;
+}
+
+.form__input--textarea textarea {
+    height: 150px;
+}
+
+.form__group-checkbox {
+    display: flex;
+}
+
+.form__group-checkbox label{
+    margin-right: 30px;
+}
+
+.form__button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form__button-submit {
+    padding: 5px;
+    width: 25%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(249, 198, 30, 0.849);
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.registration__back-btn {
+    padding: 5px;
+    width: 25%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: rgb(192, 191, 191);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+.form__button a {
+    padding: 13px 80px;
+}

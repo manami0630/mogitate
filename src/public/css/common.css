@@ -1,0 +1,21 @@
+.header {
+    background: #fff;
+}
+
+.header__inner {
+    padding: 15px 10px;
+    max-width: 1230px;
+}
+
+.header__logo {
+    color: rgb(220, 177, 69);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: serif;
+}
+
+main {
+    background-color: rgba(159, 122, 122, 0.071);
+    height: 100vh;
+}

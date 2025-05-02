@@ -1,0 +1,156 @@
+main {
+    background-color: rgba(159, 122, 122, 0.071);
+    height: 100vh;
+}
+
+.list__content {
+    margin: 0 auto;
+    padding: 0px 15px;
+    width: 100%;
+}
+
+.form {
+    margin: 0 auto;
+}
+
+.form__group {
+    display: flex;
+}
+
+.form__group--search {
+    width: 20%;
+}
+
+.form__input--text input {
+    width: 95%;
+    border-radius: 20px;
+    border: 1px solid #8b796970;
+    padding: 10px 20px;
+    color: #8b7969ef;
+    margin-top: 10px;
+}
+
+.form__button input {
+    width: 95%;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 166, 0, 0.749);
+    background-color: rgba(255, 166, 0, 0.749);
+    padding: 8px;
+}
+
+.form__button-search {
+    margin-top: 20px;
+}
+
+.form__group-title {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #8b796970;
+}
+
+select {
+    width: 95%;
+    border-radius: 3px;
+    border: 1px solid #8b796970;
+    padding: 10px 20px;
+    color: #8b7969a8;
+    margin: 10px 0;
+}
+
+.list-nav__item {
+    margin: 15px;
+    background-color: rgba(255, 166, 0, 0.785);
+    padding: 8px 13px;
+    border-radius: 4px;
+}
+
+.list-nav__link {
+    text-decoration: none;
+    color: black;
+
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.form__group--card {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.form_flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.practice__card {
+    width: 30%;
+    height: 270px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+
+.card__img{
+    height: 80%;
+}
+
+.card__img img {
+    width: 100%;
+}
+
+.card__content {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #fff;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page-link {
+    text-decoration: none;
+}
+
+li {
+    margin-right: 5px;
+    padding: 0 9px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.pagination .active {
+    background-color: rgba(255, 166, 0, 0.537);
+    color: white;
+}
+
+.selected-order {
+    border: 1px solid rgba(255, 166, 0, 0.537);
+    border-radius: 20px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.remove-order {
+    margin-left: 5px;
+    color: rgba(255, 166, 0, 0.537);
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0 3px;
+    border: 1px solid rgba(255, 166, 0, 0.537);
+    border-radius: 50%;
+}
+
+.form_flex a {
+    text-decoration: none;
+    color: black;
+}
