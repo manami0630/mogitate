@@ -109,8 +109,16 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
-        $seasonIds = $request->input('seasons', []);
+        $filename = null;
 
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $originalName = $file->getClientOriginalName();
+            $filename = time() . '_' . $originalName;
+            $file->move(public_path('storage/img'), $filename);
+        }
+
+        $seasonIds = $request->input('seasons', []);
         $seasonIdString = implode(',', $seasonIds);
 
         Product::create([
@@ -118,18 +126,10 @@ class ProductController extends Controller
             'price' => $request->input('price'),
             'description' => $request->input('description'),
             'season_id' => $seasonIdString,
-            'image' => $request->file('image'),
+            'image' => $filename,
         ]);
 
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $filename = time() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('storage/img'), $filename);
-            $data['image'] = 'storage/img/' . $filename;
-        }
-        return redirect()->route('products.list');
+        return redirect()->route('products.list', ['id' => 1])->with('filename', $filename);
     }
-
-
 
 }

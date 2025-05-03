@@ -51,7 +51,7 @@
                 <div class="form__group-content">
                     <div class="form__input--text">
                         <input type="file" name="image" id="image" accept="image/*" style="display: none;">
-                        <img id="image-preview" style="margin-top: 10px; max-width: 380px;">
+                        <img id="image-preview" src="{{ isset($filename) ? asset('storage/'. $filename) : '' }}" style="margin-top: 10px; max-width: 380px; display: {{ isset($filename) ? 'block' : 'none' }};">
                         <button type="button" id="upload-button" class="upload-btn">ファイルを選択</button>
                     </div>
                     <div class="form__error">
@@ -103,20 +103,22 @@
             </div>
         </form>
         <script>
-            document.getElementById('upload-button').addEventListener('click', function() {
-                document.getElementById('image').click();
+            const fileInput = document.getElementById('image');
+            const preview = document.getElementById('image-preview');
+            const button = document.getElementById('upload-button');
+
+            button.addEventListener('click', () => {
+                fileInput.click();
             });
 
-            document.getElementById('image').addEventListener('change', function() {
-                const file = this.files[0];
-                if (file) {
-                const reader = new FileReader();
-                    reader.onload = function(event) {
-                        const imgElement = document.getElementById('image-preview');
-                        imgElement.src = event.target.result;
-                        imgElement.style.display = 'block';
-                    }
-                    reader.readAsDataURL(file);
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files && fileInput.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = (e) => {
+                        preview.src = e.target.result;
+                        preview.style.display = 'block';
+                    };
+                    reader.readAsDataURL(fileInput.files[0]);
                 }
             });
         </script>
