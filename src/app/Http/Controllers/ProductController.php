@@ -79,15 +79,20 @@ class ProductController extends Controller
     {
         $product = Product::findOrFail($id);
 
-        $data = $request->only(['name', 'price', 'description', 'season_id', 'image']);
+        $data = $request->only(['name', 'price', 'description']);
 
-        if (isset($data['season_id'])) {
-            $data['season_id'] = is_array($data['season_id']) ? $data['season_id'][0] : $data['season_id'];
+        $seasons = $request->input('seasons');
+
+        if ($seasons && is_array($seasons)) {
+            $season_id = $seasons[0];
         }
+
+        $product->season_id = $season_id;
+        $product->fill($request->except('seasons', 'image'));
 
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('public/img');
-            $data['image'] = basename($path);
+            $product->image = basename($path);
         }
 
         $product->fill($data);
@@ -117,8 +122,9 @@ class ProductController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('public/img');
-            $filename = basename($path);
+            $file = $request->file('image');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('storage/img'), $filename);
             $data['image'] = 'storage/img/' . $filename;
         }
         return redirect()->route('products.list');

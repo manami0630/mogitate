@@ -71,11 +71,11 @@
                     <label>{{ $season->name }}</label>
                   </div>
                   @endforeach
-                  <div class="form__error">
-                    @error('season_id')
-                    {{ $message }}
-                    @enderror
-                  </div>
+                </div>
+                <div class="form__error">
+                  @error('season_id')
+                  {{ $message }}
+                  @enderror
                 </div>
               </div>
             </div>

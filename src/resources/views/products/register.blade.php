@@ -50,8 +50,8 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="file" name="image" id="image" accept="image/*" style="display: none;" required>
-                        <img id="image-preview" style="display:none; margin-top: 10px; max-width: 380px;">
+                        <input type="file" name="image" id="image" accept="image/*" style="display: none;">
+                        <img id="image-preview" style="margin-top: 10px; max-width: 380px;">
                         <button type="button" id="upload-button" class="upload-btn">ファイルを選択</button>
                     </div>
                     <div class="form__error">
